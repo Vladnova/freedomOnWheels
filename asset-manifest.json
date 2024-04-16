@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/freedomOnWheels/static/css/main.43ffe820.css",
-    "main.js": "/freedomOnWheels/static/js/main.55806321.js",
+    "main.css": "/freedomOnWheels/static/css/main.b515c86f.css",
+    "main.js": "/freedomOnWheels/static/js/main.c8445048.js",
     "static/media/Inter-SemiBold.ttf": "/freedomOnWheels/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
     "static/media/Inter-Medium.ttf": "/freedomOnWheels/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
     "static/media/Inter-Regular.ttf": "/freedomOnWheels/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
     "index.html": "/freedomOnWheels/index.html",
-    "main.43ffe820.css.map": "/freedomOnWheels/static/css/main.43ffe820.css.map",
-    "main.55806321.js.map": "/freedomOnWheels/static/js/main.55806321.js.map"
+    "main.b515c86f.css.map": "/freedomOnWheels/static/css/main.b515c86f.css.map",
+    "main.c8445048.js.map": "/freedomOnWheels/static/js/main.c8445048.js.map"
   },
   "entrypoints": [
-    "static/css/main.43ffe820.css",
-    "static/js/main.55806321.js"
+    "static/css/main.b515c86f.css",
+    "static/js/main.c8445048.js"
   ]
 }
