@@ -110,11 +110,3 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-#root {
-  display: flex;
-  gap: 64px;
-  justify-content: center;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
