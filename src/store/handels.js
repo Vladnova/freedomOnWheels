@@ -9,6 +9,7 @@ export const handelRejected = (state, { payload }) => {
 };
 
 export const handelGetAdverts = (state, { payload }) => {
+
   state.items = payload;
   state.isLoading = false;
   state.error = '';
