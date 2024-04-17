@@ -1,0 +1,6 @@
+.wrap_list_details{
+  display: flex;
+  width: 526px;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}

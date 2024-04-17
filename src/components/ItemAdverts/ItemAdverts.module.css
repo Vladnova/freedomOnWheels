@@ -4,8 +4,6 @@
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 20px;
   padding: 24px;
-  width: 888px;
-  height: 358px;
 }
 
 .wrap_img {
@@ -19,8 +17,20 @@
   outline: none;
   width: 100%;
   height: 100%;
+  border-radius: 10px;
   object-fit: cover;
   object-position: center;
+}
+
+.wrap_right_part {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  width: 526px;
+}
+
+.wrap_head_item {
+  width: 100%;
 }
 
 .wrap_subtitle {
@@ -36,6 +46,7 @@
 .reviews {
   text-decoration: underline;
   text-decoration-skip-ink: none;
+  margin-right: 16px;
 }
 
 .description_advert {
@@ -46,5 +57,16 @@
   overflow: hidden;
   color: #475467;
   line-height: 24px;
-  margin-top: 24px;
+}
+
+.button_show_more {
+  border-radius: 200px;
+  padding: 16px 40px;
+  width: 166px;
+  height: 56px;
+  background-color: var(--accent-color);
+
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #fff;
 }
