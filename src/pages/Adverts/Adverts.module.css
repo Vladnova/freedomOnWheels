@@ -1,5 +1,6 @@
 .container {
   padding: 100px 64px;
+  display: flex;
 }
 
 .button_load_more {
