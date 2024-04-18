@@ -1,8 +1,18 @@
 import ListDetailsAdvert from 'components/ListDetailsAdvert';
 import styles from './ItemAdverts.module.css';
 import Button from 'components/Button';
+import { useState } from 'react';
+import Modal from 'components/Modal';
 
 const ItemAdverts = ({ catalog }) => {
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handelClickShowMore = (id) => {
+    setShowModal(true);
+
+  };
+
   return (
     <>
       {catalog.map(
@@ -51,13 +61,18 @@ const ItemAdverts = ({ catalog }) => {
                 transmission={transmission}
                 engine={engine}
               />
-              <Button type="button" className={styles.button_show_more}>
+              <Button
+                type="button"
+                className={styles.button_show_more}
+                onClick={()=>handelClickShowMore(_id)}
+              >
                 Show more
               </Button>
             </div>
           </li>
         )
       )}
+      {showModal && <Modal />}
     </>
   );
 };
