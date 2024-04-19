@@ -23,7 +23,7 @@ const Adverts = () => {
   return (
     <main className={styles.container}>
       <Options/>
-      <div>
+      <div className={styles.wrap_adverts}>
         <ListAdverts catalog={adverts} />
         <Button
           type="button"
