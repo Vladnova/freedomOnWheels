@@ -1,4 +1,5 @@
-import ItemAdverts from 'components/ItemAdverts';
+
+import ItemAdverts from './ItemAdverts';
 import styles from './ListAdverts.module.css';
 
 const ListAdverts = ({ catalog }) => {

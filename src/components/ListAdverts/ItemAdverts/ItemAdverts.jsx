@@ -1,16 +1,14 @@
-import ListDetailsAdvert from 'components/ListDetailsAdvert';
-import styles from './ItemAdverts.module.css';
-import Button from 'components/Button';
 import { useState } from 'react';
 import Modal from 'components/Modal';
+import ListDetailsAdvert from './ListDetailsAdvert';
+import Button from 'components/Button';
+import styles from './ItemAdverts.module.css';
 
 const ItemAdverts = ({ catalog }) => {
-
   const [showModal, setShowModal] = useState(false);
 
-  const handelClickShowMore = (id) => {
+  const handelClickShowMore = id => {
     setShowModal(true);
-
   };
 
   return (
@@ -64,7 +62,7 @@ const ItemAdverts = ({ catalog }) => {
               <Button
                 type="button"
                 className={styles.button_show_more}
-                onClick={()=>handelClickShowMore(_id)}
+                onClick={() => handelClickShowMore(_id)}
               >
                 Show more
               </Button>

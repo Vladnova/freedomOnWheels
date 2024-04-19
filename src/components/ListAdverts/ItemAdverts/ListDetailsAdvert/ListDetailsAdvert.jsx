@@ -1,5 +1,5 @@
-import ItemDetailsAdvert from 'components/ItemDetailsAdvert';
-import { normalize } from '../../utils/normalize';
+import ItemDetailsAdvert from './ItemDetailsAdvert';
+import { normalize } from '../../../../utils/normalize';
 import { modifieFirstLetter } from 'utils/modifieFirstLetter';
 import styles from './ListDetailsAdvert.module.css';
 
@@ -13,7 +13,7 @@ const ListDetailsAdvert = ({ details, adults, transmission, engine }) => {
         .slice(0, 3)
         .map((value, index) => (
           <ItemDetailsAdvert key={index}>
-           {normalize(details, value)}
+            {normalize(details, value)}
           </ItemDetailsAdvert>
         ))}
     </ul>
