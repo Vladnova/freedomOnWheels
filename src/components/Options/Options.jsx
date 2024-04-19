@@ -1,5 +1,6 @@
 import styles from './Options.module.css';
-import { createEquipment } from '../../utils/createEquipment';
+import TypeCar from './TypeCar';
+import Equipment from './Equipment';
 
 const Options = () => {
   return (
@@ -17,20 +18,10 @@ const Options = () => {
       <p className={styles.subtitle_filter}>Filters</p>
       <h4 className={styles.title_options}>Vehicle equipment</h4>
       <div className={styles.line}></div>
-      <ul>
-        {createEquipment().map(({ id, value, text, svg }) => (
-          <li key={id}>
-            <button type="button" data-name={value}>
-              <svg width='40' height='40'>
-                <use href={svg}></use>
-              </svg>
-              {text}
-            </button>
-          </li>
-        ))}
-      </ul>
+      <Equipment />
       <h4 className={styles.title_options}>Vehicle type</h4>
       <div className={styles.line}></div>
+      <TypeCar />
     </div>
   );
 };
