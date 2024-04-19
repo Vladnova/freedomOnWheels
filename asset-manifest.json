@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/freedomOnWheels/static/css/main.46ef5007.css",
-    "main.js": "/freedomOnWheels/static/js/main.3a416640.js",
+    "main.css": "/freedomOnWheels/static/css/main.15113759.css",
+    "main.js": "/freedomOnWheels/static/js/main.89ba41dc.js",
     "static/media/Inter-SemiBold.ttf": "/freedomOnWheels/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
     "static/media/Inter-Medium.ttf": "/freedomOnWheels/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
     "static/media/Inter-Regular.ttf": "/freedomOnWheels/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
@@ -14,11 +14,11 @@
     "static/media/automatic.svg": "/freedomOnWheels/static/media/automatic.085763daf095ca959fd9ec1b8c09b681.svg",
     "static/media/TV.svg": "/freedomOnWheels/static/media/TV.9441aa77ef81c36ee85698c948df7d27.svg",
     "static/media/kitchen.svg": "/freedomOnWheels/static/media/kitchen.013b8a6e264fdbeed834b12709867450.svg",
-    "main.46ef5007.css.map": "/freedomOnWheels/static/css/main.46ef5007.css.map",
-    "main.3a416640.js.map": "/freedomOnWheels/static/js/main.3a416640.js.map"
+    "main.15113759.css.map": "/freedomOnWheels/static/css/main.15113759.css.map",
+    "main.89ba41dc.js.map": "/freedomOnWheels/static/js/main.89ba41dc.js.map"
   },
   "entrypoints": [
-    "static/css/main.46ef5007.css",
-    "static/js/main.3a416640.js"
+    "static/css/main.15113759.css",
+    "static/js/main.89ba41dc.js"
   ]
 }
