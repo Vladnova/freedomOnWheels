@@ -61,3 +61,25 @@
   color: var(--primary-color);
   margin-top: 8px;
 }
+
+.btn_search {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 64px;
+  border-radius: 200px;
+  padding: 16px 60px;
+  width: 166px;
+  height: 56px;
+  background-color: var(--accent-color);
+
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #fff;
+  transition: background-color 300ms ease;
+}
+
+.btn_search:hover,
+.btn_search:focus {
+  background-color: var(--btn-hover-color);
+}

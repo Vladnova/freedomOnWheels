@@ -7,19 +7,19 @@ export const normalize = (obj, value) => {
   if (obj[value] < 0) return;
 
   if (value === 'airConditioner') {
-    return { id: 1, value: 'AC', svg: <IconAc width="20" height="20" /> };
+    return { id: 1, value: 'AC', svg: <IconAc width="20" height="20" aria-label='airConditioner' /> };
   }
   if (value === 'beds') {
     return {
       id: 2,
       value: `${obj[value]} ${value}`,
-      svg: <IconBeds width="20" height="20" />,
+      svg: <IconBeds width="20" height="20" aria-label='beds' />,
     };
   }
 
   return {
     id: 3,
     value: modifieFirstLetter(value),
-    svg: <IconKitchen width="20" height="20" />,
+    svg: <IconKitchen width="20" height="20" aria-label='kitchen' />,
   };
 };

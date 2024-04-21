@@ -28,7 +28,8 @@
   /* COLORS */
   --primary-color: #101828;
   --accent-color: #e44848;
-  --input-color:#f7f7f7;
+  --input-color: #f7f7f7;
+  --btn-hover-color: #d84343;
   /* FONTS */
   --primary-font: 'Inter', sans-serif;
 }

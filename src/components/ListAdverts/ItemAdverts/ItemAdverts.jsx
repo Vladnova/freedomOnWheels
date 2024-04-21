@@ -3,9 +3,14 @@ import Modal from 'components/Modal';
 import ListDetailsAdvert from './ListDetailsAdvert';
 import Button from 'components/Button';
 import styles from './ItemAdverts.module.css';
+import { ReactComponent as IconStar } from '../../../img/svg/star.svg';
+import { ReactComponent as IconHeart } from '../../../img/svg/heart.svg';
+import { ReactComponent as IconMapPin } from '../../../img/svg/map-pin.svg';
+import { settingActiveElement } from 'utils/settingActiveElement';
 
 const ItemAdverts = ({ catalog }) => {
   const [showModal, setShowModal] = useState(false);
+  const [activeElements, setActiveElements] = useState([]);
 
   const handelClickShowMore = id => {
     setShowModal(true);
@@ -15,7 +20,7 @@ const ItemAdverts = ({ catalog }) => {
     <>
       {catalog.map(
         ({
-          _id,
+          id,
           name,
           description,
           gallery,
@@ -28,7 +33,7 @@ const ItemAdverts = ({ catalog }) => {
           engine,
           details,
         }) => (
-          <li className={styles.item} key={_id}>
+          <li className={styles.item} key={id}>
             <div className={styles.wrap_img}>
               <img
                 className={styles.image}
@@ -41,13 +46,37 @@ const ItemAdverts = ({ catalog }) => {
             <div className={styles.wrap_right_part}>
               <div className={styles.wrap_head_item}>
                 <div className={styles.wrap_subtitle}>
-                  <h4>{name}</h4>
-                  <h4>€{price.toFixed(2)}</h4>
+                  <h4 className={styles.name_and_prise_text}>{name}</h4>
+                  <div className={styles.wrap_price}>
+                    <h4 className={styles.name_and_prise_text}>
+                      €{price.toFixed(2)}
+                    </h4>
+                    <IconHeart
+                      className={`${styles.heart} ${activeElements.includes(id) && styles.active_heart}`}
+                      width="24"
+                      height="24"
+                      aria-label="heart"
+                      onClick={() =>
+                        settingActiveElement(
+                          id,
+                          activeElements,
+                          setActiveElements
+                        )
+                      }
+                    />
+                  </div>
                 </div>
                 <div className={styles.wrap_reviews}>
+                  <IconStar width="16" height="16" aria-label="star" />
                   <p className={styles.reviews}>
                     {rating}({reviews.length} Reviews)
                   </p>
+                  <IconMapPin
+                    className={styles.map_pin}
+                    width="16"
+                    height="16"
+                    aria-label="map-pin"
+                  />
                   <p>{location}</p>
                 </div>
               </div>
@@ -62,7 +91,7 @@ const ItemAdverts = ({ catalog }) => {
               <Button
                 type="button"
                 className={styles.button_show_more}
-                onClick={() => handelClickShowMore(_id)}
+                onClick={() => handelClickShowMore(id)}
               >
                 Show more
               </Button>

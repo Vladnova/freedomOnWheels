@@ -39,14 +39,47 @@
   margin-bottom: 8px;
 }
 
+.wrap_price {
+  display: flex;
+  align-items: center;
+}
+
+.name_and_prise_text {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.heart {
+  margin-left: 10px;
+  stroke: var(--primary-color);
+  cursor: pointer;
+  transition: stroke 300ms ease;
+}
+
+.heart:hover {
+  stroke: var(--accent-color);
+}
+
+.active_heart {
+  fill: var(--accent-color);
+  stroke: var(--accent-color);
+}
+
 .wrap_reviews {
   display: flex;
+  align-items: center;
 }
 
 .reviews {
   text-decoration: underline;
   text-decoration-skip-ink: none;
   margin-right: 16px;
+  margin-left: 4px;
+}
+
+.map_pin {
+  margin-right: 4px;
 }
 
 .description_advert {
@@ -69,4 +102,10 @@
   font-weight: 500;
   letter-spacing: -0.01em;
   color: #fff;
+  transition: background-color 300ms ease;
+}
+
+.button_show_more:hover,
+.button_show_more:focus {
+  background-color: var(--btn-hover-color);
 }

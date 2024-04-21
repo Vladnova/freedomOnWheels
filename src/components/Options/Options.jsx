@@ -3,22 +3,11 @@ import TypeCar from './TypeCar';
 import Equipment from './Equipment';
 import { useState } from 'react';
 import Location from './Location';
+import Button from 'components/Button';
 
 const Options = () => {
   const [activeElements, setActiveElements] = useState([]);
 
-  const handlerClick = id => {
-    let updateIdElements;
-    const isActive = activeElements.includes(id);
-
-    if (isActive) {
-      updateIdElements = activeElements.filter(idEl => idEl !== id);
-    } else {
-      updateIdElements = [...activeElements, id];
-    }
-
-    setActiveElements(updateIdElements);
-  };
   return (
     <div className={styles.wrap_options}>
       <p className={styles.subtitle_location}>Location</p>
@@ -26,10 +15,19 @@ const Options = () => {
       <p className={styles.subtitle_filter}>Filters</p>
       <h4 className={styles.title_options}>Vehicle equipment</h4>
       <div className={styles.line}></div>
-      <Equipment onClick={handlerClick} activeElements={activeElements} />
+      <Equipment
+        setActiveElements={setActiveElements}
+        activeElements={activeElements}
+      />
       <h4 className={styles.title_options}>Vehicle type</h4>
       <div className={styles.line}></div>
-      <TypeCar onClick={handlerClick} activeElements={activeElements} />
+      <TypeCar
+        setActiveElements={setActiveElements}
+        activeElements={activeElements}
+      />
+      <Button className={styles.btn_search} type="button">
+        Search
+      </Button>
     </div>
   );
 };

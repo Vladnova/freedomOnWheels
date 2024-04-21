@@ -3,7 +3,6 @@
   display: flex;
 }
 
-
 .button_load_more {
   display: block;
   margin-left: auto;
@@ -18,4 +17,10 @@
   font-weight: 500;
   letter-spacing: -0.01em;
   color: var(--primary-color);
+  transition: border-color 300ms ease;
+}
+
+.button_load_more:hover,
+.button_load_more:focus {
+  border-color: var(--btn-hover-color);
 }
