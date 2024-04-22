@@ -103,6 +103,7 @@
   letter-spacing: -0.01em;
   color: #fff;
   transition: background-color 300ms ease;
+  outline: none;
 }
 
 .button_show_more:hover,

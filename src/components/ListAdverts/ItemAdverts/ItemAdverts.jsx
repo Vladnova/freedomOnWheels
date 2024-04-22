@@ -7,13 +7,21 @@ import { ReactComponent as IconStar } from '../../../img/svg/star.svg';
 import { ReactComponent as IconHeart } from '../../../img/svg/heart.svg';
 import { ReactComponent as IconMapPin } from '../../../img/svg/map-pin.svg';
 import { settingActiveElement } from 'utils/settingActiveElement';
+import { getOneAdvert } from 'api/adverts';
 
 const ItemAdverts = ({ catalog }) => {
   const [showModal, setShowModal] = useState(false);
   const [activeElements, setActiveElements] = useState([]);
+  const [advert, setadvert] = useState({});
 
-  const handelClickShowMore = id => {
-    setShowModal(true);
+  const handelClickShowMore = async id => {
+    const data = await getOneAdvert(id);
+    setadvert(data);
+    isOpenModal();
+  };
+
+  const isOpenModal = (e) => {
+    setShowModal(!showModal);
   };
 
   return (
@@ -52,7 +60,9 @@ const ItemAdverts = ({ catalog }) => {
                       €{price.toFixed(2)}
                     </h4>
                     <IconHeart
-                      className={`${styles.heart} ${activeElements.includes(id) && styles.active_heart}`}
+                      className={`${styles.heart} ${
+                        activeElements.includes(id) && styles.active_heart
+                      }`}
                       width="24"
                       height="24"
                       aria-label="heart"
@@ -99,7 +109,7 @@ const ItemAdverts = ({ catalog }) => {
           </li>
         )
       )}
-      {showModal && <Modal />}
+      {showModal && <Modal isToggleModal={isOpenModal} advert={advert} />}
     </>
   );
 };

@@ -7,3 +7,8 @@ export const getAdverts = async (page) => {
   return data;
 };
 
+export const getOneAdvert = async (id) => {
+  const { data } = await axios.get(`adverts/${id}`);
+  return data;
+};
+
