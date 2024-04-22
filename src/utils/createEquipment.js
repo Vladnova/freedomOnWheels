@@ -1,15 +1,37 @@
 import { ReactComponent as IconAc } from '../img/svg/AC.svg';
-import { ReactComponent as IconAutomatic } from '../img/svg/automatic.svg';
-import { ReactComponent as IconKitchen } from '../img/svg/kitchen.svg';
-import { ReactComponent as IconTV } from '../img/svg/TV.svg';
-import { ReactComponent as IconShower } from '../img/svg/shower-WC.svg';
+import Icon from 'components/Icon';
 
 export const createEquipment = () => {
   return [
-    { id: 'e1', value: 'airConditioner', svg: <IconAc width='32' height='32' aria-label='airConditioner' />, text: 'AC' },
-    { id: 'e2', value: 'transmission', svg: <IconAutomatic width='32' height='32' aria-label='transmission' />, text: 'Automatic' },
-    { id: 'e3', value: 'kitchen', svg: <IconKitchen width='32' height='32' aria-label='kitchen' />, text: 'Kitchen' },
-    { id: 'e4', value: 'TV', svg: <IconTV width='32' height='32' aria-label='TV' />, text: 'TV' },
-    { id: 'e5', value: 'shower', svg: <IconShower width='32' height='32' aria-label='shower' />, text: 'Shower/WC' },
+    {
+      id: 'e1',
+      value: 'airConditioner',
+      svg: <IconAc width="32" height="32" aria-label="airConditioner" />,
+      text: 'AC',
+    },
+    {
+      id: 'e2',
+      value: 'transmission',
+      svg: <Icon width="32" height="32" name="automatic" />,
+      text: 'Automatic',
+    },
+    {
+      id: 'e3',
+      value: 'kitchen',
+      svg: <Icon width="32" height="32" name="kitchen" />,
+      text: 'Kitchen',
+    },
+    {
+      id: 'e4',
+      value: 'TV',
+      svg: <Icon width="32" height="32" name="TV" />,
+      text: 'TV',
+    },
+    {
+      id: 'e5',
+      value: 'shower',
+      svg: <Icon width="32" height="32" name="shower" />,
+      text: 'Shower/WC',
+    },
   ];
 };

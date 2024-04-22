@@ -2,12 +2,10 @@ import { useState } from 'react';
 import Modal from 'components/Modal';
 import ListDetailsAdvert from '../../ListDetailsAdvert';
 import Button from 'components/Button';
-import styles from './ItemAdverts.module.css';
-import { ReactComponent as IconStar } from '../../../img/svg/star.svg';
-import { ReactComponent as IconHeart } from '../../../img/svg/heart.svg';
-import { ReactComponent as IconMapPin } from '../../../img/svg/map-pin.svg';
 import { settingActiveElement } from 'utils/settingActiveElement';
 import { getOneAdvert } from 'api/adverts';
+import Icon from 'components/Icon';
+import styles from './ItemAdverts.module.css';
 
 const ItemAdverts = ({ catalog }) => {
   const [showModal, setShowModal] = useState(false);
@@ -20,7 +18,7 @@ const ItemAdverts = ({ catalog }) => {
     isOpenModal();
   };
 
-  const isOpenModal = (e) => {
+  const isOpenModal = e => {
     setShowModal(!showModal);
   };
 
@@ -59,13 +57,13 @@ const ItemAdverts = ({ catalog }) => {
                     <h4 className={styles.name_and_prise_text}>
                       €{price.toFixed(2)}
                     </h4>
-                    <IconHeart
+                    <Icon
                       className={`${styles.heart} ${
                         activeElements.includes(id) && styles.active_heart
                       }`}
                       width="24"
                       height="24"
-                      aria-label="heart"
+                      name="heart"
                       onClick={() =>
                         settingActiveElement(
                           id,
@@ -77,15 +75,15 @@ const ItemAdverts = ({ catalog }) => {
                   </div>
                 </div>
                 <div className={styles.wrap_reviews}>
-                  <IconStar width="16" height="16" aria-label="star" />
+                  <Icon width="16" height="16" name="star" />
                   <p className={styles.reviews}>
                     {rating}({reviews.length} Reviews)
                   </p>
-                  <IconMapPin
+                  <Icon
                     className={styles.map_pin}
                     width="16"
                     height="16"
-                    aria-label="map-pin"
+                    name="map-pin"
                   />
                   <p>{location}</p>
                 </div>

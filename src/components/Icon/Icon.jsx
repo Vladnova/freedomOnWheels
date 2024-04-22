@@ -1,0 +1,18 @@
+import sprite from '../../img/svg/sprite.svg';
+import styles from './Icon.module.css';
+
+const Icon = ({ name, height, width, className, onClick }) => {
+  return (
+    <svg
+      className={`${styles.icon} ${className}`}
+      height={height}
+      width={width}
+      aria-label={name}
+      onClick={onClick}
+    >
+      <use href={`${sprite}#icon-${name}`}></use>
+    </svg>
+  );
+};
+
+export default Icon;

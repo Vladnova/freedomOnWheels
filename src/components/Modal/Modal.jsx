@@ -1,12 +1,10 @@
 import styles from './Modal.module.css';
 import ReactDOM from 'react-dom';
-import { ReactComponent as IconClose } from '../../img/svg/close.svg';
-import { ReactComponent as IconStar } from '../../img/svg/star.svg';
-import { ReactComponent as IconMapPin } from '../../img/svg/map-pin.svg';
 import Button from 'components/Button';
 import { useEffect, useState } from 'react';
 import Features from 'components/Features';
 import Form from 'components/Form';
+import Icon from 'components/Icon';
 
 const Modal = ({ isToggleModal, advert }) => {
   useEffect(() => {
@@ -82,22 +80,22 @@ const Modal = ({ isToggleModal, advert }) => {
         <div className={styles.modal_content}>
           <div className={styles.wrap_head_modal}>
             <h4 className={styles.name}>{name}</h4>
-            <IconClose
+            <Icon
               className={styles.close_btn}
               width="32"
               height="32"
-              aria-label="close"
+              name="close"
               onClick={isToggleModal}
             />
           </div>
           <div className={styles.wrap_loc_and_rating}>
-            <IconStar width="16" height="16" aria-label="star" />
+            <Icon width="16" height="16" name="star" />
             <p className={styles.reviews}>{rating} (Reviews)</p>
-            <IconMapPin
+            <Icon
               className={styles.map_pin}
               width="16"
               height="16"
-              aria-label="map-pin"
+              name="map-pin"
             />
             <p>{location}</p>
           </div>

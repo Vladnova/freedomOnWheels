@@ -1,25 +1,23 @@
-import { ReactComponent as IconVan } from '../img/svg/van.svg';
-import { ReactComponent as IconFully } from '../img/svg/fully.svg';
-import { ReactComponent as IconAlcove } from '../img/svg/alcove.svg';
+import Icon from 'components/Icon';
 
 export const createTypeCar = () => {
   return [
     {
       id: 't1',
       value: 'panelTruck',
-      svg: <IconVan width="40" height="28" aria-label="panelTruck" />,
+      svg: <Icon width="40" height="28" name="panelTruck" />,
       text: 'Van',
     },
     {
       id: 't2',
       value: 'fullyIntegrated',
-      svg: <IconFully width="40" height="28" aria-label="fullyIntegrated" />,
+      svg: <Icon width="40" height="28" name="fullyIntegrated" />,
       text: 'Fully Integrated',
     },
     {
       id: 't3',
       value: 'alcove',
-      svg: <IconAlcove width="40" height="28" aria-label="alcove" />,
+      svg: <Icon width="40" height="28" name="alcove" />,
       text: 'Alcove',
     },
   ];

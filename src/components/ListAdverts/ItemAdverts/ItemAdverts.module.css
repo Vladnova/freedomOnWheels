@@ -52,7 +52,6 @@
 
 .heart {
   margin-left: 10px;
-  stroke: var(--primary-color);
   cursor: pointer;
   transition: stroke 300ms ease;
 }

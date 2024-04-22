@@ -4,6 +4,7 @@ import styleParent from '../Options.module.css';
 import { settingActiveElement } from 'utils/settingActiveElement';
 
 const Equipment = ({ setActiveElements, activeElements }) => {
+
   return (
     <ul className={`${styleParent.list_option} ${styles.list_mt_bt}`}>
       {createEquipment().map(({ id, value, text, svg }) => (
