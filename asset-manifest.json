@@ -1,34 +1,19 @@
 {
   "files": {
-    "main.css": "/freedomOnWheels/static/css/main.9cb30aaa.css",
-    "main.js": "/freedomOnWheels/static/js/main.6a13c8a7.js",
+    "main.css": "/freedomOnWheels/static/css/main.a935b857.css",
+    "main.js": "/freedomOnWheels/static/js/main.3bc85103.js",
     "static/media/Inter-SemiBold.ttf": "/freedomOnWheels/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
     "static/media/Inter-Medium.ttf": "/freedomOnWheels/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
     "static/media/Inter-Regular.ttf": "/freedomOnWheels/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
+    "static/media/sprite.svg": "/freedomOnWheels/static/media/sprite.859bbf5ac2093b6099e383fbb3840d7f.svg",
     "static/media/AC.svg": "/freedomOnWheels/static/media/AC.1482405f8a0391fa64858e5b1bee6bcd.svg",
-    "static/media/alcove.svg": "/freedomOnWheels/static/media/alcove.67e15ce970591bda85ea6b7f397acbe1.svg",
-    "static/media/van.svg": "/freedomOnWheels/static/media/van.0e4e5175d46d2dd924033e611a60839a.svg",
-    "static/media/fully.svg": "/freedomOnWheels/static/media/fully.763fb6800638a84257030b7633d51569.svg",
     "static/media/AC-smol.svg": "/freedomOnWheels/static/media/AC-smol.270237363744e1391041fcda1e88ed79.svg",
-    "static/media/users.svg": "/freedomOnWheels/static/media/users.da1a0876f46088f65ed4c5707cb73b36.svg",
     "index.html": "/freedomOnWheels/index.html",
-    "static/media/beds.svg": "/freedomOnWheels/static/media/beds.72f21609b5a37c90350c0d90dc8f0973.svg",
-    "static/media/shower-WC.svg": "/freedomOnWheels/static/media/shower-WC.fcd440b725cf39b2b1ee102ffead0393.svg",
-    "static/media/petrol.svg": "/freedomOnWheels/static/media/petrol.37bb1c442c426fe8fc76e8bad4b134a8.svg",
-    "static/media/automatic-smol.svg": "/freedomOnWheels/static/media/automatic-smol.748ed072c9901e53756ceb9afe92ac27.svg",
-    "static/media/automatic.svg": "/freedomOnWheels/static/media/automatic.085763daf095ca959fd9ec1b8c09b681.svg",
-    "static/media/star.svg": "/freedomOnWheels/static/media/star.4a1adaa5c84833a4ef91d8d9112c239b.svg",
-    "static/media/heart.svg": "/freedomOnWheels/static/media/heart.43a21027d953ec9cee13e236fd1df22f.svg",
-    "static/media/map-pin.svg": "/freedomOnWheels/static/media/map-pin.56efbbfb25a6795d872187a9d9246a6a.svg",
-    "static/media/TV.svg": "/freedomOnWheels/static/media/TV.9441aa77ef81c36ee85698c948df7d27.svg",
-    "static/media/kitchen-smol.svg": "/freedomOnWheels/static/media/kitchen-smol.4d1b815cce5435dae973f9b20725f80f.svg",
-    "static/media/kitchen.svg": "/freedomOnWheels/static/media/kitchen.013b8a6e264fdbeed834b12709867450.svg",
-    "static/media/close.svg": "/freedomOnWheels/static/media/close.d7457d50d0c2fc47ca82735ef3c29888.svg",
-    "main.9cb30aaa.css.map": "/freedomOnWheels/static/css/main.9cb30aaa.css.map",
-    "main.6a13c8a7.js.map": "/freedomOnWheels/static/js/main.6a13c8a7.js.map"
+    "main.a935b857.css.map": "/freedomOnWheels/static/css/main.a935b857.css.map",
+    "main.3bc85103.js.map": "/freedomOnWheels/static/js/main.3bc85103.js.map"
   },
   "entrypoints": [
-    "static/css/main.9cb30aaa.css",
-    "static/js/main.6a13c8a7.js"
+    "static/css/main.a935b857.css",
+    "static/js/main.3bc85103.js"
   ]
 }
