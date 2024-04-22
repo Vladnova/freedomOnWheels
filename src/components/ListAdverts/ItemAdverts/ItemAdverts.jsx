@@ -95,6 +95,7 @@ const ItemAdverts = ({ catalog }) => {
                 adults={adults}
                 transmission={transmission}
                 engine={engine}
+                idxEl={6}
               />
               <Button
                 type="button"

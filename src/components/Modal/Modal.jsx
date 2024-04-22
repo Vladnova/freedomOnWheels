@@ -129,18 +129,16 @@ const Modal = ({ isToggleModal, advert }) => {
             </Button>
           </div>
           {toggleActiveBtn === 'features' && (
-            <>
-              <div className={styles.wrap_features}>
-                <Features
-                  vehicleDetails={vehicleDetails}
-                  transmission={transmission}
-                  adults={adults}
-                  engine={engine}
-                  details={details}
-                />
-                <Form />
-              </div>
-            </>
+            <div className={styles.wrap_features}>
+              <Features
+                vehicleDetails={vehicleDetails}
+                transmission={transmission}
+                adults={adults}
+                engine={engine}
+                details={details}
+              />
+              <Form />
+            </div>
           )}
         </div>
       </div>

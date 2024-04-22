@@ -4,14 +4,20 @@ import styles from './ListDetailsAdvert.module.css';
 import { createParamsForItem } from 'utils/createParamsForItem';
 import Icon from 'components/Icon';
 import { ReactComponent as IconAc } from '../../img/svg/AC-smol.svg';
+import { createDetailsArr } from 'utils/createDetailsArr';
 
-const ListDetailsAdvert = ({ details, adults, transmission, engine }) => {
+const ListDetailsAdvert = ({
+  details,
+  adults,
+  transmission,
+  engine,
+  idxEl
+}) => {
   const newObj = createNewObject({ details, adults, transmission, engine });
 
   return (
     <ul className={styles.wrap_list_details}>
-      {Object.keys(newObj)
-        .slice(0, 6)
+      {createDetailsArr(newObj, idxEl)
         .map(el => {
           const value = createParamsForItem(newObj, el);
           return (
@@ -21,11 +27,7 @@ const ListDetailsAdvert = ({ details, adults, transmission, engine }) => {
                   value === 'AC' ? (
                     <IconAc />
                   ) : (
-                    <Icon
-                      width="20"
-                      height="20"
-                      name={el}
-                    />
+                    <Icon width="20" height="20" name={el} />
                   )
                 }
                 key={value}

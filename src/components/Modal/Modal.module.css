@@ -158,4 +158,5 @@
 
 .wrap_features {
   display: flex;
+  column-gap: 24px;
 }
