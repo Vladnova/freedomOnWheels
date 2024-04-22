@@ -156,6 +156,6 @@
   background-color: var(--accent-color);
 }
 
-/* .line {
-  border-bottom: 1px solid rgba(16, 24, 40, 0.2);
-} */
+.wrap_features {
+  display: flex;
+}

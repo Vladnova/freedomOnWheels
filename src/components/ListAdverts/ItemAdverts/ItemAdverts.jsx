@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Modal from 'components/Modal';
-import ListDetailsAdvert from './ListDetailsAdvert';
+import ListDetailsAdvert from '../../ListDetailsAdvert';
 import Button from 'components/Button';
 import styles from './ItemAdverts.module.css';
 import { ReactComponent as IconStar } from '../../../img/svg/star.svg';

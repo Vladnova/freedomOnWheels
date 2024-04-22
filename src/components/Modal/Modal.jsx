@@ -5,6 +5,8 @@ import { ReactComponent as IconStar } from '../../img/svg/star.svg';
 import { ReactComponent as IconMapPin } from '../../img/svg/map-pin.svg';
 import Button from 'components/Button';
 import { useEffect, useState } from 'react';
+import Features from 'components/Features';
+import Form from 'components/Form';
 
 const Modal = ({ isToggleModal, advert }) => {
   useEffect(() => {
@@ -24,7 +26,7 @@ const Modal = ({ isToggleModal, advert }) => {
   }, [isToggleModal]);
 
   const modalRoot = document.getElementById('modal');
-  const [toggleActiveBtn, setToggleActiveBtn] = useState(0);
+  const [toggleActiveBtn, setToggleActiveBtn] = useState('');
   if (!modalRoot) return null;
 
   const handleClickOverlay = event => {
@@ -34,13 +36,12 @@ const Modal = ({ isToggleModal, advert }) => {
   };
 
   const handleClickFeatures = () => {
-    setToggleActiveBtn(1);
+    setToggleActiveBtn('features');
   };
 
   const handleClickReviews = () => {
-    setToggleActiveBtn(2);
+    setToggleActiveBtn('reviews');
   };
-
 
   const {
     name,
@@ -50,11 +51,26 @@ const Modal = ({ isToggleModal, advert }) => {
     rating,
     price,
     // reviews,
-    // transmission,
-    // adults,
-    // engine,
-    // details,
+    transmission,
+    adults,
+    engine,
+    details,
+    form,
+    length,
+    width,
+    height,
+    tank,
+    consumption,
   } = advert;
+
+  const vehicleDetails = {
+    form,
+    length,
+    width,
+    height,
+    tank,
+    consumption,
+  };
 
   return ReactDOM.createPortal(
     <div
@@ -66,7 +82,13 @@ const Modal = ({ isToggleModal, advert }) => {
         <div className={styles.modal_content}>
           <div className={styles.wrap_head_modal}>
             <h4 className={styles.name}>{name}</h4>
-            <IconClose className={styles.close_btn} width="32" height="32" aria-label="close" onClick={isToggleModal}/>
+            <IconClose
+              className={styles.close_btn}
+              width="32"
+              height="32"
+              aria-label="close"
+              onClick={isToggleModal}
+            />
           </div>
           <div className={styles.wrap_loc_and_rating}>
             <IconStar width="16" height="16" aria-label="star" />
@@ -92,22 +114,36 @@ const Modal = ({ isToggleModal, advert }) => {
             <Button
               onClick={handleClickFeatures}
               className={`${styles.btn_modal} ${
-                toggleActiveBtn === 1 && styles.active_btn
+                toggleActiveBtn === 'features' && styles.active_btn
               }`}
               type="button"
             >
               Features
             </Button>
             <Button
-            onClick={handleClickReviews}
+              onClick={handleClickReviews}
               className={`${styles.btn_modal} ${
-                toggleActiveBtn === 2 && styles.active_btn
+                toggleActiveBtn === 'reviews' && styles.active_btn
               }`}
               type="button"
             >
               Reviews
             </Button>
           </div>
+          {toggleActiveBtn === 'features' && (
+            <>
+              <div className={styles.wrap_features}>
+                <Features
+                  vehicleDetails={vehicleDetails}
+                  transmission={transmission}
+                  adults={adults}
+                  engine={engine}
+                  details={details}
+                />
+                <Form />
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>,
