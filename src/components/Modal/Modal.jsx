@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Features from 'components/Features';
 import Form from 'components/Form';
 import Icon from 'components/Icon';
+import Reviews from 'components/Reviews';
 
 const Modal = ({ isToggleModal, advert }) => {
   useEffect(() => {
@@ -48,7 +49,7 @@ const Modal = ({ isToggleModal, advert }) => {
     location,
     rating,
     price,
-    // reviews,
+    reviews,
     transmission,
     adults,
     engine,
@@ -128,18 +129,27 @@ const Modal = ({ isToggleModal, advert }) => {
               Reviews
             </Button>
           </div>
-          {toggleActiveBtn === 'features' && (
-            <div className={styles.wrap_features}>
-              <Features
-                vehicleDetails={vehicleDetails}
-                transmission={transmission}
-                adults={adults}
-                engine={engine}
-                details={details}
-              />
-              <Form />
-            </div>
-          )}
+
+          <div className={styles.wrap_features}>
+            {toggleActiveBtn === 'features' && (
+              <>
+                <Features
+                  vehicleDetails={vehicleDetails}
+                  transmission={transmission}
+                  adults={adults}
+                  engine={engine}
+                  details={details}
+                />
+                <Form />
+              </>
+            )}
+            {toggleActiveBtn === 'reviews' && (
+              <>
+                <Reviews reviews={reviews} />
+                <Form />
+              </>
+            )}
+          </div>
         </div>
       </div>
     </div>,
