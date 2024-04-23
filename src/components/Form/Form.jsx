@@ -1,26 +1,46 @@
+import Button from 'components/Button';
+import styles from './Form.module.css';
+
 const Form = () => {
   return (
-    <div>
-      <h2>Book your campervan now</h2>
-      <p>Stay connected! We are always ready to help you.</p>
+    <div className={styles.wrap_form}>
+      <h2 className={styles.title_form}>Book your campervan now</h2>
+      <p className={styles.subtitle_form}>
+        Stay connected! We are always ready to help you.
+      </p>
       <form>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" />
+        <div className={styles.wrap_input}>
+          <input
+            className={styles.input_form}
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+          />
+
+          <input
+            className={styles.input_form}
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+          />
+          <input
+            className={styles.input_form}
+            type="date"
+            id="bookingDate"
+            name="bookingDate"
+            placeholder="Booking date"
+          />
+          <textarea
+            className={`${styles.input_form} ${styles.textarea_form}`}
+            id="comment"
+            name="comment"
+            rows="4"
+            cols="50"
+          ></textarea>
         </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" />
-        </div>
-        <div>
-          <label htmlFor="bookingDate">Booking Date:</label>
-          <input type="date" id="bookingDate" name="bookingDate" />
-        </div>
-        <div>
-          <label htmlFor="comment">Comment:</label>
-          <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
-        </div>
-        <button type="submit">Send</button>
+        <Button className={styles.btn_form} type="submit">Send</Button>
       </form>
     </div>
   );
