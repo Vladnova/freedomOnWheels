@@ -2,15 +2,18 @@ import { useState } from 'react';
 import Modal from 'components/Modal';
 import ListDetailsAdvert from '../../ListDetailsAdvert';
 import Button from 'components/Button';
-import { settingActiveElements } from 'utils/settingActiveElements';
 import { getOneAdvert } from 'api/adverts';
 import Icon from 'components/Icon';
 import styles from './ItemAdverts.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { addFavorites, delFavorites } from 'store/sliceAdvers';
+import { getFavoritesSelector } from 'store/selectors';
 
 const ItemAdverts = ({ catalog }) => {
   const [showModal, setShowModal] = useState(false);
-  const [activeElements, setActiveElements] = useState([]);
   const [advert, setadvert] = useState({});
+  const dispatch = useDispatch();
+  const favorites = useSelector(getFavoritesSelector);
 
   const handelClickShowMore = async id => {
     const data = await getOneAdvert(id);
@@ -18,14 +21,27 @@ const ItemAdverts = ({ catalog }) => {
     isOpenModal();
   };
 
-  const isOpenModal = e => {
+  const isOpenModal = () => {
     setShowModal(!showModal);
+  };
+
+  const isActive = advartId => favorites.some(({ id }) => id === advartId);
+
+  const handlerAddFavorites = advert => {
+    const findIbxAdvert = favorites.findIndex(({ id }) => id === advert.id);
+
+    if (findIbxAdvert !== -1) {
+      dispatch(delFavorites(advert.id));
+      return;
+    }
+
+    dispatch(addFavorites(advert));
   };
 
   return (
     <>
-      {catalog.map(
-        ({
+      {catalog.map(advert => {
+        const {
           id,
           name,
           description,
@@ -38,7 +54,8 @@ const ItemAdverts = ({ catalog }) => {
           adults,
           engine,
           details,
-        }) => (
+        } = advert;
+        return (
           <li className={styles.item} key={id}>
             <div className={styles.wrap_img}>
               <img
@@ -59,18 +76,12 @@ const ItemAdverts = ({ catalog }) => {
                     </h4>
                     <Icon
                       className={`${styles.heart} ${
-                        activeElements.includes(id) && styles.active_heart
+                        isActive(id) && styles.active_heart
                       }`}
                       width="24"
                       height="24"
                       name="heart"
-                      onClick={() =>
-                        settingActiveElements({
-                          id,
-                          activeElements,
-                          setActiveElements,
-                        })
-                      }
+                      onClick={() => handlerAddFavorites(advert)}
                     />
                   </div>
                 </div>
@@ -111,8 +122,8 @@ const ItemAdverts = ({ catalog }) => {
               </Button>
             </div>
           </li>
-        )
-      )}
+        );
+      })}
       {showModal && <Modal isToggleModal={isOpenModal} advert={advert} />}
     </>
   );
