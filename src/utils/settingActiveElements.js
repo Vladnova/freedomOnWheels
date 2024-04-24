@@ -1,4 +1,8 @@
-export const settingActiveElement = (id, activeElements, setActiveElements) => {
+export const settingActiveElements = ({
+  id,
+  activeElements,
+  setActiveElements,
+}) => {
   let updateIdElements;
   const isActive = activeElements.includes(id);
 

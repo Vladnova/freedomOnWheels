@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Modal from 'components/Modal';
 import ListDetailsAdvert from '../../ListDetailsAdvert';
 import Button from 'components/Button';
-import { settingActiveElement } from 'utils/settingActiveElement';
+import { settingActiveElements } from 'utils/settingActiveElements';
 import { getOneAdvert } from 'api/adverts';
 import Icon from 'components/Icon';
 import styles from './ItemAdverts.module.css';
@@ -65,11 +65,11 @@ const ItemAdverts = ({ catalog }) => {
                       height="24"
                       name="heart"
                       onClick={() =>
-                        settingActiveElement(
+                        settingActiveElements({
                           id,
                           activeElements,
-                          setActiveElements
-                        )
+                          setActiveElements,
+                        })
                       }
                     />
                   </div>

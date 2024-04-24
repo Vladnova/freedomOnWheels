@@ -1,10 +1,11 @@
 import { createEquipment } from 'utils/createEquipment';
 import styles from './Equipment.module.css';
 import styleParent from '../Options.module.css';
-import { settingActiveElement } from 'utils/settingActiveElement';
+import { settingActiveElements } from 'utils/settingActiveElements';
+import { useState } from 'react';
 
-const Equipment = ({ setActiveElements, activeElements }) => {
-
+const Equipment = () => {
+  const [activeElements, setActiveElements] = useState([]);
   return (
     <ul className={`${styleParent.list_option} ${styles.list_mt_bt}`}>
       {createEquipment().map(({ id, value, text, svg }) => (
@@ -14,7 +15,11 @@ const Equipment = ({ setActiveElements, activeElements }) => {
             activeElements.includes(id) && styleParent.active_item
           }`}
           onClick={() =>
-            settingActiveElement(id, activeElements, setActiveElements)
+            settingActiveElements({
+              id,
+              activeElements,
+              setActiveElements,
+            })
           }
         >
           <button
