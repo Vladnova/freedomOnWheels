@@ -75,7 +75,12 @@ const ItemAdverts = ({ catalog }) => {
                   </div>
                 </div>
                 <div className={styles.wrap_reviews}>
-                  <Icon width="16" height="16" name="star" />
+                  <Icon
+                    className={styles.active_star}
+                    width="16"
+                    height="16"
+                    name="star"
+                  />
                   <p className={styles.reviews}>
                     {rating}({reviews.length} Reviews)
                   </p>

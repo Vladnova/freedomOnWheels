@@ -14,6 +14,7 @@ const TypeCar = ({ setActiveElements, activeElements }) => {
           }`}
           onClick={() => settingActiveElement(id, activeElements, setActiveElements)}
         >
+          
           <button
             className={styleParent.btn_option}
             type="button"

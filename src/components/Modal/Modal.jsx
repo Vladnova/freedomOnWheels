@@ -90,7 +90,7 @@ const Modal = ({ isToggleModal, advert }) => {
             />
           </div>
           <div className={styles.wrap_loc_and_rating}>
-            <Icon width="16" height="16" name="star" />
+            <Icon className={styles.active_star} width="16" height="16" name="star" />
             <p className={styles.reviews}>{rating} (Reviews)</p>
             <Icon
               className={styles.map_pin}

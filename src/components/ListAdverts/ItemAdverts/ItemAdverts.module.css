@@ -70,6 +70,11 @@
   align-items: center;
 }
 
+.active_star {
+  fill: #ffc531;
+  stroke: #ffc531;
+}
+
 .reviews {
   text-decoration: underline;
   text-decoration-skip-ink: none;

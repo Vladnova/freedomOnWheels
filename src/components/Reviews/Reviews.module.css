@@ -8,6 +8,7 @@
 .wrap_user {
   display: flex;
   margin-bottom: 16px;
+  align-items: center;
 }
 
 .avatar {
@@ -27,6 +28,21 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33333;
+}
+
+.wrap_star {
+  display: flex;
+  column-gap: 4px;
+}
+
+.active_star {
+  fill: #ffc531;
+  stroke: #ffc531;
+}
+
+.not_active_star {
+  fill: #f2f4f7;
+  stroke: #f2f4f7;
 }
 
 .comment {

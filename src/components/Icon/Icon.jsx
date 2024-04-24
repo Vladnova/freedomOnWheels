@@ -4,7 +4,7 @@ import styles from './Icon.module.css';
 const Icon = ({ name, height, width, className, onClick }) => {
   return (
     <svg
-      className={`${styles.icon} ${className}`}
+      className={`${className} ${styles.icon}`}
       height={height}
       width={width}
       aria-label={name}

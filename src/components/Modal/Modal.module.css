@@ -42,8 +42,22 @@
   width: 982px;
   max-height: 90vh;
   overflow: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #475467 transparent;
+  scrollbar-width: 8px;
+}
+
+.modal_content::-webkit-scrollbar {
+  width: 8px;
+  height: 264px;
+}
+
+.modal_content::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 7px;
+  margin-right: 16px;
+}
+
+.modal_content::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 .wrap_head_modal {
@@ -139,6 +153,11 @@
   background-color: inherit;
   padding-bottom: 0;
   transition: color 300ms ease;
+}
+
+.wrap_loc_and_rating .active_star {
+  fill: #ffc531;
+  stroke: #ffc531;
 }
 
 .btn_modal:hover,

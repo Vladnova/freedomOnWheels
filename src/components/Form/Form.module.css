@@ -3,7 +3,7 @@
   border-radius: 10px;
   padding: 24px;
   width: 448px;
-  /* height: 532px; */
+  height: 532px;
 }
 
 .title_form {
@@ -29,7 +29,7 @@
   border-radius: 10px;
   padding: 18px;
   width: 400px;
-  /* height: 56px; */
+  height: 56px;
   background-color: var(--input-color);
   line-height: 1.25;
   outline: none;
@@ -42,7 +42,7 @@
 
 .textarea_form {
   resize: none;
-  /* height: 114px; */
+  height: 114px;
 }
 
 .btn_form {
@@ -62,3 +62,4 @@
 .btn_form:focus {
   background-color: var(--btn-hover-color);
 }
+
