@@ -1,12 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchAdverts } from './thunks';
-import { handelGetAdverts, handelPending, handelRejected } from './handels';
+import { fetchAdverts, fetchAllAdverts, fetchLoadMore } from './thunks';
+import {
+  handelGetAdverts,
+  handelGetAllAdverts,
+  handelLoadMore,
+  handelPending,
+  handelRejected,
+} from './handels';
 import persistConfig from './persistConfig';
 import persistReducer from 'redux-persist/es/persistReducer';
 
 const sliceAdvers = createSlice({
   name: 'adverts',
   initialState: {
+    allItems: [],
     favorites: [],
     items: [],
     isLoading: false,
@@ -24,6 +31,8 @@ const sliceAdvers = createSlice({
   extraReducers: bilder => {
     bilder
       .addCase(fetchAdverts.fulfilled, handelGetAdverts)
+      .addCase(fetchLoadMore.fulfilled, handelLoadMore)
+      .addCase(fetchAllAdverts.fulfilled, handelGetAllAdverts)
       .addMatcher(action => action.type.endsWith('pending'), handelPending)
       .addMatcher(action => action.type.endsWith('rejected'), handelRejected);
   },
@@ -31,7 +40,7 @@ const sliceAdvers = createSlice({
 
 export const advertsReducer = sliceAdvers.reducer;
 
-export const { addFavorites, delFavorites } = sliceAdvers.actions;
+export const { addFavorites, delFavorites, loadMore } = sliceAdvers.actions;
 
 const persistedReducer = persistReducer(persistConfig, advertsReducer);
 

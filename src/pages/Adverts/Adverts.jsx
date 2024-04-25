@@ -3,10 +3,11 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   getAdvertsSelector,
+  getAllAdvertsSelector,
   getErrorSelector,
   getLoaderSelector,
 } from 'store/selectors';
-import { fetchAdverts } from 'store/thunks';
+import { fetchAdverts, fetchAllAdverts, fetchLoadMore } from 'store/thunks';
 import styles from './Adverts.module.css';
 import Button from 'components/Button';
 import Options from 'components/Options';
@@ -16,16 +17,25 @@ import Error from 'components/Error';
 const Adverts = () => {
   const dispatch = useDispatch();
   const adverts = useSelector(getAdvertsSelector);
-  const [page, setPage] = useState(1);
+  const allAdverts = useSelector(getAllAdvertsSelector);
+  const [page, setPage] = useState(0);
   const isLoading = useSelector(getLoaderSelector);
   const error = useSelector(getErrorSelector);
 
   useEffect(() => {
-    dispatch(fetchAdverts(page));
+    if (page === 0) {
+      dispatch(fetchAdverts());
+      dispatch(fetchAllAdverts());
+      setPage(prev => prev + 1);
+      return;
+    }
   }, [dispatch, page]);
+
+  const totalPages = Math.ceil(allAdverts.length / 4);
 
   const handlerLoadMore = () => {
     setPage(prev => prev + 1);
+    dispatch(fetchLoadMore(page));
   };
 
   return (
@@ -37,7 +47,7 @@ const Adverts = () => {
         <div className={`${error && styles.wrap_adverts}`}>
           {error && <Error message={error} />}
           <ListAdverts catalog={adverts} />
-          {adverts.length > 3 && (
+          {totalPages >= page && (
             <Button
               type="button"
               className={styles.button_load_more}

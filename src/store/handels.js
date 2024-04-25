@@ -13,3 +13,13 @@ export const handelGetAdverts = (state, { payload }) => {
   state.isLoading = false;
   state.error = '';
 };
+
+export const handelLoadMore = (state, { payload }) => {
+  state.items.push(...payload);
+  state.isLoading = false;
+  state.error = '';
+};
+
+export const handelGetAllAdverts = (state, { payload }) => {
+  state.allItems = payload;
+};
