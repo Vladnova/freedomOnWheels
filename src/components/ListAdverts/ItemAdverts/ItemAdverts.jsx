@@ -11,13 +11,13 @@ import { getFavoritesSelector } from 'store/selectors';
 
 const ItemAdverts = ({ catalog }) => {
   const [showModal, setShowModal] = useState(false);
-  const [advert, setadvert] = useState({});
+  const [advert, setAdvert] = useState({});
   const dispatch = useDispatch();
   const favorites = useSelector(getFavoritesSelector);
 
   const handelClickShowMore = async id => {
     const data = await getOneAdvert(id);
-    setadvert(data);
+    setAdvert(data);
     isOpenModal();
   };
 
@@ -113,6 +113,7 @@ const ItemAdverts = ({ catalog }) => {
                 engine={engine}
                 idxEl={6}
               />
+
               <Button
                 type="button"
                 className={styles.button_show_more}

@@ -1,0 +1,5 @@
+.title_error{
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 24px;
+}

@@ -24,3 +24,8 @@
 .button_load_more:focus {
   border-color: var(--btn-hover-color);
 }
+
+.wrap_adverts {
+  margin-left: auto;
+  margin-right: auto;
+}
