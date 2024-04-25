@@ -1,0 +1,15 @@
+.container {
+  padding: 100px 64px;
+  display: flex;
+}
+
+.list_favorites {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--accent-color);
+}
