@@ -15,6 +15,9 @@ const Form = () => {
             type="text"
             id="name"
             name="name"
+            pattern="^[A-Za-z\s]+$"
+            title="Please enter letters and spaces only"
+            required
             placeholder="Name"
           />
 
@@ -23,13 +26,16 @@ const Form = () => {
             type="email"
             id="email"
             name="email"
+            required
             placeholder="Email"
           />
+
           <input
             className={styles.input_form}
             type="date"
             id="bookingDate"
             name="bookingDate"
+            required
             placeholder="Booking date"
           />
           <textarea
@@ -40,7 +46,9 @@ const Form = () => {
             cols="50"
           ></textarea>
         </div>
-        <Button className={styles.btn_form} type="submit">Send</Button>
+        <Button className={styles.btn_form} type="submit">
+          Send
+        </Button>
       </form>
     </div>
   );
