@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
+import { StyledLink } from './StyledLink';
 
 const Header = () => {
   return (
@@ -7,19 +7,13 @@ const Header = () => {
       <nav>
         <ul className={styles.wrapList}>
           <li className={styles.list}>
-            <NavLink className={styles.link} to="/">
-              Home
-            </NavLink>
+            <StyledLink to="/">Home</StyledLink>
           </li>
           <li className={styles.list}>
-            <NavLink className={styles.link} to="/catalog">
-              Adverts
-            </NavLink>
+            <StyledLink to="/catalog">Adverts</StyledLink>
           </li>
           <li className={styles.list}>
-            <NavLink className={styles.link} to="/favorites">
-              Favorites
-            </NavLink>
+            <StyledLink to="/favorites">Favorites</StyledLink>
           </li>
         </ul>
       </nav>
