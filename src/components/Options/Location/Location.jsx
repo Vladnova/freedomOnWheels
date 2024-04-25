@@ -1,15 +1,18 @@
+import { useSelector } from 'react-redux';
 import styles from './Location.module.css';
+import { getAllAdvertsSelector } from 'store/selectors';
 
 const Location = () => {
+  const allAdverts = useSelector(getAllAdvertsSelector);
+  const allLocations = allAdverts.map(({ location }) => location);
   return (
     <select name="select" className={styles.select_location}>
-      <option value="1">Ukraine, Kyiv</option>
-      <option value="2">Ukraine, Poltava</option>
-      <option value="3">Ukraine, Dnipro</option>
-      <option value="4">Ukraine, Odesa</option>
-      <option value="5">Ukraine, Kharkiv</option>
-      <option value="6">Ukraine, Sumy</option>
-      <option value="7">Ukraine, Lviv</option>
+      <option value="">Please select location</option>
+      {allLocations.map((name, idx) => (
+        <option key={idx} value={idx}>
+          {name}
+        </option>
+      ))}
     </select>
   );
 };
