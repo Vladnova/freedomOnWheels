@@ -5,6 +5,7 @@ import {
   getAdvertsSelector,
   getAllAdvertsSelector,
   getErrorSelector,
+  getFilterSelector,
   getFilteredSelector,
   getLoaderSelector,
 } from 'store/selectors';
@@ -15,6 +16,7 @@ import Options from 'components/Options';
 import Loader from 'components/Loader';
 import Error from 'components/Error';
 import { resetFilter } from 'store/filterSlice';
+import { checkFilter } from 'utils/checkFilter';
 
 const Adverts = () => {
   const dispatch = useDispatch();
@@ -23,14 +25,14 @@ const Adverts = () => {
   const [page, setPage] = useState(0);
   const isLoading = useSelector(getLoaderSelector);
   const error = useSelector(getErrorSelector);
-  const filter = useSelector(getFilteredSelector);
+  const filtered = useSelector(getFilteredSelector);
+  const filter = useSelector(getFilterSelector);
 
   useEffect(() => {
     if (page === 0) {
       dispatch(fetchAdverts());
       dispatch(fetchAllAdverts());
       setPage(prev => prev + 1);
-      // return;
     }
     return () => {
       dispatch(resetFilter());
@@ -43,7 +45,7 @@ const Adverts = () => {
     setPage(prev => prev + 1);
     dispatch(fetchLoadMore(page));
   };
-
+  const isFilter = checkFilter(filter);
   return (
     <main className={styles.container}>
       <Options />
@@ -52,12 +54,12 @@ const Adverts = () => {
       {!isLoading && (
         <div className={`${error && styles.wrap_adverts}`}>
           {error && <Error message={error} />}
-          {filter.length ? (
-            <ListAdverts catalog={filter.length < 13 ? filter : adverts} />
+          {filtered.length ? (
+            <ListAdverts catalog={isFilter ? filtered : adverts} />
           ) : (
-            <h1 className={styles.title_not_found}>Nothing found</h1>
+            isFilter && <h1 className={styles.title_not_found}>Nothing found</h1>
           )}
-          {!!filter.length && totalPages >= page && (
+          {!isFilter && totalPages >= page && (
             <Button
               type="button"
               className={styles.button_load_more}
