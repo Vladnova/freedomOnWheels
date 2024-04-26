@@ -1,9 +1,19 @@
 {
   "files": {
-    "main.css": "/freedomOnWheels/static/css/main.8ed266f7.css",
-    "main.js": "/freedomOnWheels/static/js/main.04c75e24.js",
-    "static/css/526.51369d6f.chunk.css": "/freedomOnWheels/static/css/526.51369d6f.chunk.css",
-    "static/js/526.472b3d06.chunk.js": "/freedomOnWheels/static/js/526.472b3d06.chunk.js",
+    "main.css": "/freedomOnWheels/static/css/main.7b8726aa.css",
+    "main.js": "/freedomOnWheels/static/js/main.a0a54243.js",
+    "static/css/48.25327070.chunk.css": "/freedomOnWheels/static/css/48.25327070.chunk.css",
+    "static/js/48.5995f7bb.chunk.js": "/freedomOnWheels/static/js/48.5995f7bb.chunk.js",
+    "static/css/885.f2736917.chunk.css": "/freedomOnWheels/static/css/885.f2736917.chunk.css",
+    "static/js/885.7203c0b5.chunk.js": "/freedomOnWheels/static/js/885.7203c0b5.chunk.js",
+    "static/css/904.11186abd.chunk.css": "/freedomOnWheels/static/css/904.11186abd.chunk.css",
+    "static/js/904.b7e694b4.chunk.js": "/freedomOnWheels/static/js/904.b7e694b4.chunk.js",
+    "static/css/663.be214f58.chunk.css": "/freedomOnWheels/static/css/663.be214f58.chunk.css",
+    "static/js/663.a62703dd.chunk.js": "/freedomOnWheels/static/js/663.a62703dd.chunk.js",
+    "static/css/497.364ab09e.chunk.css": "/freedomOnWheels/static/css/497.364ab09e.chunk.css",
+    "static/js/497.0c21d1c0.chunk.js": "/freedomOnWheels/static/js/497.0c21d1c0.chunk.js",
+    "static/js/989.feb31210.chunk.js": "/freedomOnWheels/static/js/989.feb31210.chunk.js",
+    "static/js/890.012b5507.chunk.js": "/freedomOnWheels/static/js/890.012b5507.chunk.js",
     "static/media/Inter-SemiBold.ttf": "/freedomOnWheels/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
     "static/media/Inter-Medium.ttf": "/freedomOnWheels/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
     "static/media/Inter-Regular.ttf": "/freedomOnWheels/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
@@ -12,13 +22,23 @@
     "static/media/AC.svg": "/freedomOnWheels/static/media/AC.1482405f8a0391fa64858e5b1bee6bcd.svg",
     "static/media/AC-smol.svg": "/freedomOnWheels/static/media/AC-smol.270237363744e1391041fcda1e88ed79.svg",
     "index.html": "/freedomOnWheels/index.html",
-    "main.8ed266f7.css.map": "/freedomOnWheels/static/css/main.8ed266f7.css.map",
-    "main.04c75e24.js.map": "/freedomOnWheels/static/js/main.04c75e24.js.map",
-    "526.51369d6f.chunk.css.map": "/freedomOnWheels/static/css/526.51369d6f.chunk.css.map",
-    "526.472b3d06.chunk.js.map": "/freedomOnWheels/static/js/526.472b3d06.chunk.js.map"
+    "main.7b8726aa.css.map": "/freedomOnWheels/static/css/main.7b8726aa.css.map",
+    "main.a0a54243.js.map": "/freedomOnWheels/static/js/main.a0a54243.js.map",
+    "48.25327070.chunk.css.map": "/freedomOnWheels/static/css/48.25327070.chunk.css.map",
+    "48.5995f7bb.chunk.js.map": "/freedomOnWheels/static/js/48.5995f7bb.chunk.js.map",
+    "885.f2736917.chunk.css.map": "/freedomOnWheels/static/css/885.f2736917.chunk.css.map",
+    "885.7203c0b5.chunk.js.map": "/freedomOnWheels/static/js/885.7203c0b5.chunk.js.map",
+    "904.11186abd.chunk.css.map": "/freedomOnWheels/static/css/904.11186abd.chunk.css.map",
+    "904.b7e694b4.chunk.js.map": "/freedomOnWheels/static/js/904.b7e694b4.chunk.js.map",
+    "663.be214f58.chunk.css.map": "/freedomOnWheels/static/css/663.be214f58.chunk.css.map",
+    "663.a62703dd.chunk.js.map": "/freedomOnWheels/static/js/663.a62703dd.chunk.js.map",
+    "497.364ab09e.chunk.css.map": "/freedomOnWheels/static/css/497.364ab09e.chunk.css.map",
+    "497.0c21d1c0.chunk.js.map": "/freedomOnWheels/static/js/497.0c21d1c0.chunk.js.map",
+    "989.feb31210.chunk.js.map": "/freedomOnWheels/static/js/989.feb31210.chunk.js.map",
+    "890.012b5507.chunk.js.map": "/freedomOnWheels/static/js/890.012b5507.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ed266f7.css",
-    "static/js/main.04c75e24.js"
+    "static/css/main.7b8726aa.css",
+    "static/js/main.a0a54243.js"
   ]
 }
