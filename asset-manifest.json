@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/freedomOnWheels/static/css/main.8ed266f7.css",
-    "main.js": "/freedomOnWheels/static/js/main.295e1219.js",
-    "static/css/526.00ffe2af.chunk.css": "/freedomOnWheels/static/css/526.00ffe2af.chunk.css",
-    "static/js/526.51286cd0.chunk.js": "/freedomOnWheels/static/js/526.51286cd0.chunk.js",
+    "main.js": "/freedomOnWheels/static/js/main.04c75e24.js",
+    "static/css/526.51369d6f.chunk.css": "/freedomOnWheels/static/css/526.51369d6f.chunk.css",
+    "static/js/526.472b3d06.chunk.js": "/freedomOnWheels/static/js/526.472b3d06.chunk.js",
     "static/media/Inter-SemiBold.ttf": "/freedomOnWheels/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
     "static/media/Inter-Medium.ttf": "/freedomOnWheels/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
     "static/media/Inter-Regular.ttf": "/freedomOnWheels/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
@@ -13,12 +13,12 @@
     "static/media/AC-smol.svg": "/freedomOnWheels/static/media/AC-smol.270237363744e1391041fcda1e88ed79.svg",
     "index.html": "/freedomOnWheels/index.html",
     "main.8ed266f7.css.map": "/freedomOnWheels/static/css/main.8ed266f7.css.map",
-    "main.295e1219.js.map": "/freedomOnWheels/static/js/main.295e1219.js.map",
-    "526.00ffe2af.chunk.css.map": "/freedomOnWheels/static/css/526.00ffe2af.chunk.css.map",
-    "526.51286cd0.chunk.js.map": "/freedomOnWheels/static/js/526.51286cd0.chunk.js.map"
+    "main.04c75e24.js.map": "/freedomOnWheels/static/js/main.04c75e24.js.map",
+    "526.51369d6f.chunk.css.map": "/freedomOnWheels/static/css/526.51369d6f.chunk.css.map",
+    "526.472b3d06.chunk.js.map": "/freedomOnWheels/static/js/526.472b3d06.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8ed266f7.css",
-    "static/js/main.295e1219.js"
+    "static/js/main.04c75e24.js"
   ]
 }
