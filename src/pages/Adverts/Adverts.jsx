@@ -33,7 +33,7 @@ const Adverts = () => {
     }
   }, [dispatch, page]);
 
-  useEffect(() => {});
+  useEffect(() => {}, [filter]);
 
   const totalPages = Math.ceil(allAdverts.length / 4);
 
