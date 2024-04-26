@@ -29,7 +29,7 @@ const Adverts = () => {
       dispatch(fetchAdverts());
       dispatch(fetchAllAdverts());
       setPage(prev => prev + 1);
-      return;
+      // return;
     }
   }, [dispatch, page]);
 
