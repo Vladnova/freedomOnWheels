@@ -14,6 +14,7 @@ import Button from 'components/Button';
 import Options from 'components/Options';
 import Loader from 'components/Loader';
 import Error from 'components/Error';
+import { resetFilter } from 'store/filterSlice';
 
 const Adverts = () => {
   const dispatch = useDispatch();
@@ -31,9 +32,10 @@ const Adverts = () => {
       setPage(prev => prev + 1);
       // return;
     }
+    return () => {
+      dispatch(resetFilter());
+    };
   }, [dispatch, page]);
-
-  useEffect(() => {}, [filter]);
 
   const totalPages = Math.ceil(allAdverts.length / 4);
 
