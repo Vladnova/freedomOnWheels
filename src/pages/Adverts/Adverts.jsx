@@ -28,6 +28,8 @@ const Adverts = () => {
   const filtered = useSelector(getFilteredSelector);
   const filter = useSelector(getFilterSelector);
 
+  const [isFilter, setIsFilter] = useState(false);
+
   useEffect(() => {
     if (page === 0) {
       dispatch(fetchAdverts());
@@ -45,7 +47,11 @@ const Adverts = () => {
     setPage(prev => prev + 1);
     dispatch(fetchLoadMore(page));
   };
-  const isFilter = checkFilter(filter);
+  useEffect(() => {
+    setIsFilter(checkFilter(filter));
+  }, [filter]);
+  
+
   return (
     <main className={styles.container}>
       <Options />
@@ -57,7 +63,9 @@ const Adverts = () => {
           {filtered.length ? (
             <ListAdverts catalog={isFilter ? filtered : adverts} />
           ) : (
-            isFilter && <h1 className={styles.title_not_found}>Nothing found</h1>
+            isFilter && (
+              <h1 className={styles.title_not_found}>Nothing found</h1>
+            )
           )}
           {!isFilter && totalPages >= page && (
             <Button
