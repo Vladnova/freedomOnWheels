@@ -1,15 +1,15 @@
 export const settingActiveElements = ({
-  id,
+  value,
   activeElements,
   setActiveElements,
 }) => {
   let updateIdElements;
-  const isActive = activeElements.includes(id);
+  const isActive = activeElements.includes(value);
 
   if (isActive) {
-    updateIdElements = activeElements.filter(idEl => idEl !== id);
+    updateIdElements = activeElements.filter(el => el !== value);
   } else {
-    updateIdElements = [...activeElements, id];
+    updateIdElements = [...activeElements, value];
   }
 
   setActiveElements(updateIdElements);

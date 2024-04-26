@@ -5,6 +5,7 @@ import {
   getAdvertsSelector,
   getAllAdvertsSelector,
   getErrorSelector,
+  getFilteredSelector,
   getLoaderSelector,
 } from 'store/selectors';
 import { fetchAdverts, fetchAllAdverts, fetchLoadMore } from 'store/thunks';
@@ -21,6 +22,7 @@ const Adverts = () => {
   const [page, setPage] = useState(0);
   const isLoading = useSelector(getLoaderSelector);
   const error = useSelector(getErrorSelector);
+  const filter = useSelector(getFilteredSelector);
 
   useEffect(() => {
     if (page === 0) {
@@ -30,6 +32,8 @@ const Adverts = () => {
       return;
     }
   }, [dispatch, page]);
+
+  useEffect(() => {});
 
   const totalPages = Math.ceil(allAdverts.length / 4);
 
@@ -46,8 +50,12 @@ const Adverts = () => {
       {!isLoading && (
         <div className={`${error && styles.wrap_adverts}`}>
           {error && <Error message={error} />}
-          <ListAdverts catalog={adverts} />
-          {totalPages >= page && (
+          {filter.length ? (
+            <ListAdverts catalog={filter.length < 13 ? filter : adverts} />
+          ) : (
+            <h1 className={styles.title_not_found}>Nothing found</h1>
+          )}
+          {!!filter.length && totalPages >= page && (
             <Button
               type="button"
               className={styles.button_load_more}

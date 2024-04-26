@@ -29,3 +29,8 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.title_not_found {
+  width: 800px;
+  text-align: center;
+}

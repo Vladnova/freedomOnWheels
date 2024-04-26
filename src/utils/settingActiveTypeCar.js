@@ -1,15 +1,15 @@
 export const settingActiveTypeCar = ({
-  id,
+  value,
   activeTypeCar,
   setActiveTypeCar,
 }) => {
   let updateIdElements;
-  const isActive = activeTypeCar === id;
+  const isActive = activeTypeCar === value;
 
   if (isActive) {
     updateIdElements = '';
   } else {
-    updateIdElements = id;
+    updateIdElements = value;
   }
 
   setActiveTypeCar(updateIdElements);
